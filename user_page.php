@@ -30,7 +30,7 @@ $accountID = $userArray['accountId'];
 
 var accountType = "<?php echo $accountType; ?>"
 
-if(accountType == "Admi"){
+if(accountType == "Admin"){
     var navBar = document.createElement('ul');
     var ele1 = document.createElement('li');
     ele1.innerHTML = '<a href="user_page.php">Register Nurse</a>';
@@ -55,7 +55,7 @@ if(accountType == "Admi"){
     navBar.appendChild(ele7);
     document.getElementById('navBar').appendChild(navBar);
 }
-if(accountType == "Admins"){
+if(accountType == "Nurse"){
     var navBar = document.createElement('ul');
     var ele1 = document.createElement('li');
     ele1.innerHTML = '<a href="user_page.php">Update Information</a>';
@@ -74,7 +74,7 @@ if(accountType == "Admins"){
     navBar.appendChild(ele5);
     document.getElementById('navBar').appendChild(navBar);
 }
-if(accountType == "Admin"){
+if(accountType == "Patient"){
     var navBar = document.createElement('ul');
     var ele1 = document.createElement('li');
     ele1.innerHTML = '<a href="user_page.php">Update Information</a>';
