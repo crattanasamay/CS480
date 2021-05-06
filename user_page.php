@@ -33,7 +33,7 @@ var accountType = "<?php echo $accountType; ?>"
 if(accountType == "Admin"){
     var navBar = document.createElement('ul');
     var ele1 = document.createElement('li');
-    ele1.innerHTML = '<a href="user_page.php">Register Nurse</a>';
+    ele1.innerHTML = '<a href="register_nurse.php">Register Nurse</a>';
     navBar.appendChild(ele1);
     var ele2 = document.createElement('li');
     ele2.innerHTML = '<a href="user_page.php">Update Nurse Information</a>';
