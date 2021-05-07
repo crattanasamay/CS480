@@ -55,7 +55,7 @@ if(isset($_POST["information-submit"])){
             $input = "INSERT admins (adminID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','$Occupation','$PhoneNumber','$address')";
     
         case "Nurse:":
-        $input = "INSERT nurses (nurseID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','$Occupation','$PhoneNumber','$address')";
+            $input = "INSERT nurses (nurseID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','$Occupation','$PhoneNumber','$address')";
     }
 
 

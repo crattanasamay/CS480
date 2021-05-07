@@ -36,14 +36,8 @@ if(accountType == "Admin"){
     ele1.innerHTML = '<a href="register_nurse.php">Register Nurse</a>';
     navBar.appendChild(ele1);
     var ele2 = document.createElement('li');
-    ele2.innerHTML = '<a href="user_page.php">Update Nurse Information</a>';
+    ele2.innerHTML = '<a href="update_nurse.php">Update Nurse Information</a>';
     navBar.appendChild(ele2);
-    var ele3 = document.createElement('li');
-    ele3.innerHTML = '<a href="user_page.php">Delete Nurse</a>';
-    navBar.appendChild(ele3);
-    var ele4 = document.createElement('li');
-    ele4.innerHTML = '<a href="user_page.php">Update Nurse Information</a>';
-    navBar.appendChild(ele4);
     var ele5 = document.createElement('li');
     ele5.innerHTML = '<a href="user_page.php">Update Vaccine</a>';
     navBar.appendChild(ele5);

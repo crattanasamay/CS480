@@ -1,18 +1,22 @@
-<section class ="create-form">
-    <h3>Create Account</h3>
+<?php
+
+include "database.php";
+?>
+
+<section class ="create-form-nurse">
+    <h3>Register Nurse</h3>
     <div class = "create-account-form">
         <form action ="" method = "post" name="create-account-nurse">
-            <input type="text" name="newuserName" id="newuserName" placeholder="Username">
-            <input type ="text" name="newpassword" id= "newpassword" placeholder="Password">
-            <input type = "text" name="Fname" placeholder="First Name">
-            <input type = "text" name="Lname" placeholder= "Last Name">
-            <input type = "number" name="SSN" placeholder="Social Security Number">
-            <input type = "number" name="Age" placeholder="Age">
-            <input type = "text" name="Gender" placeholder ="Gender">
-            <input type = "text" name="Race" placeholder = "Race">
-            <input type = "text" name="Occupation" placeholder = "Occupation">
-            <input type = "number" name="Phone#" placeholder="Phone Number">
-            <input type = "text" name = "Address" placeholder = "Address">
+            <input type="text" name="nnewuserName"  placeholder="Username">
+            <input type ="text" name="nnewpassword"  placeholder="Password">
+            <input type = "text" name="nFname" placeholder="First Name">
+            <input type = "text" name="nLname" placeholder= "Last Name">
+            <input type = "number" name="nSSN" placeholder="Social Security Number">
+            <input type = "number" name="nAge" placeholder="Age">
+            <input type = "text" name="nGender" placeholder ="Gender">
+            <input type = "text" name="nRace" placeholder = "Race">
+            <input type = "number" name="nPhone#" placeholder="Phone Number">
+            <input type = "text" name = "nAddress" placeholder = "Address">
             <button type =  "submit" name="nurse-submit">Finish</button>
         </form>
     </div>
@@ -23,7 +27,42 @@
 <?php 
 
 if(isset($_POST["nurse-submit"])){
-    
+    $userName = $_POST["nnewuserName"];
+    $password = $_POST["nnewpassword"];
+    $Fname = $_POST["nFname"];
+    $Lname = $_POST["nLname"];
+    $SSN = $_POST["nSSN"];
+    $Age = $_POST["nAge"];
+    $Gender = $_POST["nGender"];
+    $Race = $_POST["nRace"];
+    $PhoneNumber = $_POST["nPhone#"];
+    $address = $_POST["nAddress"];
+    $sql = "SELECT * FROM users WHERE accountUserName='$userName'";
+    $check = mysqli_query($conn,$sql);
+    if(mysqli_num_rows($check) == 0){ // Means that there are zero rows in the users table account does not
+        $accountType = "Nurse";
+        
+        $sql = "INSERT INTO users (accountUserName, accountPassword, accountType) VALUES ('$userName','$password','$accountType')";
+        mysqli_query($conn,$sql);
+        $sql = $sql ="SELECT * FROM users WHERE accountUserName='$userName'";
+        $check = mysqli_query($conn,$sql);
+        $nurseArray = mysqli_fetch_array($check);
+        $accountID = $nurseArray['accountId'];
+        $input = "INSERT nurses (nurseID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','Nurse','$PhoneNumber','$address')";
+        mysqli_query($conn,$input);
+
+
+
+        print ("<script LANGUAGE='JavaScript'>
+        window.alert('Account Created');
+        window.location.href='user_page.php';
+        </script>");
+    }
+    else{
+        print ("<script LANGUAGE='JavaScript'>
+        window.alert('Username Taken');
+        </script>");
+    }
 }
 
 ?>
