@@ -3,16 +3,27 @@
 include "database.php";
 
 ?>
-<section class ="create-form">
-    <h3>Create Account </h3>
-    <div class = "create-account-form">
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Create Account</h2>
+<section class ="login-form">
+    <div class = "login-form-form">
         <form action ="" method = "post" name="create-account">
+            <div class="user-input">
             <input type="text" name="newuserName" id="newuserName" placeholder="Username">
+</div>
+            <div class="user-input">
             <input type ="text" name="newpassword" id= "newpassword" placeholder="Password">
+</div>
             <button type = "submit" name="create-submit">Create Account</button>
         </form>
     </div>
 </section>
+</body>
+</html>
 
 
 <?php

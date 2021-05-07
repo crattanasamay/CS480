@@ -12,16 +12,21 @@ $phone_number = $array['PhoneNumber'];
 $address = $array ['Address'];
 
 ?>
-
-
-<section class = "information - form">
-    <h3>Update Nurse Information</h3>
-        <form action = "" method="post" name="update-account-information-nurse">
-            <input type = "text" name="nnnPhone#" value = "<?php echo $phone_number?>">
-            <input type = "text" name="nnnAddress" value = "<?php echo $address?>">
-            <button type = "submit" name="nurse-edit-form">Finish</button>
-        </form>
-</section>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Update Nurse Information</h2>
+    <section class = "login-form">
+            <form action = "" method="post" name="update-account-information-nurse">
+                <input type = "text" name="nnnPhone#" value = "<?php echo $phone_number?>">
+                <input type = "text" name="nnnAddress" value = "<?php echo $address?>">
+                <button type = "submit" name="nurse-edit-form">Finish</button>
+            </form>
+    </section>
+</body>
+</html>
 
 
 <?php

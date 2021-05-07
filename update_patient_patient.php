@@ -23,9 +23,13 @@ $PhoneNumber = $patientArray['PhoneNumber'];
 $Address = $patientArray['Address'];
 
 ?>
-
-<section class = "information - form">
-    <h3>Edit Information </h3>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Edit Information </h2>
+<section class = "login-form">
     <div class = "account-information-form-nurse">
         <form action = "" method ="post" name="account_information-nurse">
             <input type = "text" name="pAccount" value="<?php echo $accountUserName?>">
@@ -42,6 +46,8 @@ $Address = $patientArray['Address'];
         </form>
     </div>
 </section>
+</body>
+</html>
 
 
 <?php

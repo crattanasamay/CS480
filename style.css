@@ -1,0 +1,73 @@
+html {
+    height: 100;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,96,48,1) 100%, rgba(0,212,255,1) 100%);
+}
+.login-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #1b1b1b;
+}
+.login-form h3{
+    text-align: center;
+    background-color: aliceblue;
+    
+}
+
+.login-form .button{
+    display:inline-block;
+    
+}
+
+.login-form .user-input{
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.login-form .button{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    padding-top: 14%;
+    padding-bottom: 16px;
+    color:#fff;
+    
+}
+button{
+    text-align: center;
+}
+#navBar{
+    position:absolute;
+    width:200px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#navBar ul{
+    width:200px;
+    margin:0;
+    padding:0;
+}
+#navBar a{
+    background-color:#fff;
+    display: block;
+}
+
+table{
+    width: 100%;
+    background-color: #fff;
+}
+td{
+    text-align: center;
+}

@@ -5,23 +5,37 @@ include "database.php";
 
 
 ?>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Login</h2>
+    <section class = "login-form">
+        <div class ="login-form-form">
+            <form action= "" method = "post" name="login">
+                <div class="user-input">
+                    <input type="text" name="userName" id="userName" placeholder="Username">
+                </div>
+                <div class="user-input">
+                    <input type ="text" name = "password" id="password" placeholder ="Password">
+                </div>
+                <div class="button">
+                    <button type = "submit" name="submit">Log In</button>
+            </div>
+            </form>
+        
+   
 
-<section class = "login-form">
-    <h3>Login Up</h3>
-    <div class ="login-form">
-        <form action= "" method = "post" name="login">
-            <input type="text" name="userName" id="userName" placeholder="Username">
-            <input type ="text" name = "password" id="password" placeholder ="Password">
-            <button type = "submit" name="submit">Log In</button>
-        </form>
+            <div class="button">
+            <form action = "create_account.php" method= "post" name="createAccount">
+                <button type = "submit" name="submitCreate">Create Account </button>
+            </form>
+            </div>
     </div>
-</section>
-
-
-<form action = "create_account.php" method= "post" name="createAccount">
-    <button type = "submit" name="submitCreate">Create Account </button>
-</form>
-
+    </section>
+</body>
+</html>
 
 <?php
 

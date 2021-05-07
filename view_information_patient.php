@@ -2,8 +2,9 @@
 
 include "database.php";
 
-
-$sql = "SELECT * FROM nurses";
+session_start();
+$accountID = $_SESSION["accountId"];
+$sql = "SELECT * FROM patients WHERE PatientID = '$accountID'";
 $check = mysqli_query($conn,$sql);
 
 
@@ -18,7 +19,7 @@ $check = mysqli_query($conn,$sql);
 <table>
     <?php 
         if(mysqli_num_rows($check) > 0){
-            echo "<tr><td>Employee ID</td>
+            echo "<tr>
             <td>First Name</td>
             <td>Last Name</td>
             <td>SSN</td>
@@ -30,7 +31,7 @@ $check = mysqli_query($conn,$sql);
             <td>Address</td>";
 
             while($row = mysqli_fetch_assoc($check)){
-                echo "<tr><td>{$row['nurseID']}</td>
+                echo "<tr>
                     <td>{$row['Fname']}</td>
                     <td>{$row['Lname']}</td>
                     <td>{$row['SSN']}</td>
@@ -39,9 +40,7 @@ $check = mysqli_query($conn,$sql);
                     <td>{$row['Race']}</td>
                     <td>{$row['Occupation']}</td>
                     <td>{$row['PhoneNumber']}</td>
-                    <td>{$row['Address']}</td>
-                    <td><a href='delete.php?rn={$row['nurseID']}'>Delete</a><td>
-                    <td><a href='edit_nurse.php?rn={$row['nurseID']}'>Edit</a></td>                       
+                    <td>{$row['Address']}</td>                      
                     </tr>";
                 
             }
@@ -54,6 +53,3 @@ $check = mysqli_query($conn,$sql);
 
 </body>
 </html>
-
-
-

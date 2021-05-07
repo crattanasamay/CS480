@@ -5,24 +5,30 @@ include "database.php";
 
 ?>
 
-
-<section class = "information - form">
-    <h3>Information</h3>
-    <div class = "account-information-form">
-        <form action = "" method ="post" name="account_information">
-            <input type = "text" name="Fname" placeholder="First Name">
-            <input type = "text" name="Lname" placeholder= "Last Name">
-            <input type = "number" name="SSN" placeholder="Social Security Number">
-            <input type = "number" name="Age" placeholder="Age">
-            <input type = "text" name="Gender" placeholder ="Gender">
-            <input type = "text" name="Race" placeholder = "Race">
-            <input type = "text" name="Occupation" placeholder = "Occupation">
-            <input type = "number" name="Phone#" placeholder="Phone Number">
-            <input type = "text" name = "Address" placeholder = "Address">
-            <button type =  "submit" name="information-submit">Finish</button>
-        </form>
-    </div>
-</section>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Information</h2>
+    <section class = "login-form">
+        <div class = "login-form-form">
+            <form action = "" method ="post" name="account_information">
+                <input type = "text" name="Fname" placeholder="First Name">
+                <input type = "text" name="Lname" placeholder= "Last Name">
+                <input type = "number" name="SSN" placeholder="Social Security Number">
+                <input type = "number" name="Age" placeholder="Age">
+                <input type = "text" name="Gender" placeholder ="Gender">
+                <input type = "text" name="Race" placeholder = "Race">
+                <input type = "text" name="Occupation" placeholder = "Occupation">
+                <input type = "number" name="Phone#" placeholder="Phone Number">
+                <input type = "text" name = "Address" placeholder = "Address">
+                <button type =  "submit" name="information-submit">Finish</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
 
 <?php
 

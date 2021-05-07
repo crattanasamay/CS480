@@ -19,13 +19,21 @@ $accountType = $userArray['accountType'];
 $accountID = $userArray['accountId'];
 
 $_SESSION['accountId']=$accountID;
+$_SESSION['accountType']= $accountType;
 
 
 
 ?>
 <html>
-    <head>
-<div id="navBar"></div>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="navClass">
+    <div id="navBar"></div>
+</section>
+</body>
 <script type = "text/javascript">
 
 var accountType = "<?php echo $accountType; ?>"
@@ -41,11 +49,8 @@ if(accountType == "Admin"){
     var ele5 = document.createElement('li');
     ele5.innerHTML = '<a href="update_vaccine.php">Update Vaccine</a>';
     navBar.appendChild(ele5);
-    var ele6 = document.createElement('li');
-    ele6.innerHTML = '<a href="user_page.php">View Nurse Information</a>';
-    navBar.appendChild(ele6);
     var ele7 = document.createElement('li');
-    ele7.innerHTML = '<a href="user_page.php">View Patient Information</a>';
+    ele7.innerHTML = '<a href="view_patient.php">View Patient Information</a>';
     navBar.appendChild(ele7);
     document.getElementById('navBar').appendChild(navBar);
 }
@@ -61,10 +66,10 @@ if(accountType == "Nurse"){
     ele3.innerHTML = '<a href="user_page.php">Cancel Time</a>';
     navBar.appendChild(ele3);
     var ele4 = document.createElement('li');
-    ele4.innerHTML = '<a href="user_page.php">View Information</a>';
+    ele4.innerHTML = '<a href="view_information_nurse.php">View Information</a>';
     navBar.appendChild(ele4);
     var ele5 = document.createElement('li');
-    ele5.innerHTML = '<a href="user_page.php">Record Vaccination</a>';
+    ele5.innerHTML = '<a href="view_information_nurse.php">Record Vaccination</a>';
     navBar.appendChild(ele5);
     document.getElementById('navBar').appendChild(navBar);
 }
@@ -80,7 +85,7 @@ if(accountType == "Patient"){
     ele3.innerHTML = '<a href="user_page.php">Cancel Vaccination</a>';
     navBar.appendChild(ele3);
     var ele4 = document.createElement('li');
-    ele4.innerHTML = '<a href="user_page.php">View Information</a>';
+    ele4.innerHTML = '<a href="view_information_patient.php">View Information</a>';
     navBar.appendChild(ele4);
     document.getElementById('navBar').appendChild(navBar);
 }

@@ -2,25 +2,30 @@
 
 include "database.php";
 ?>
-
-<section class ="create-form-nurse">
-    <h3>Register Nurse</h3>
-    <div class = "create-account-form">
-        <form action ="" method = "post" name="create-account-nurse">
-            <input type="text" name="nnewuserName"  placeholder="Username">
-            <input type ="text" name="nnewpassword"  placeholder="Password">
-            <input type = "text" name="nFname" placeholder="First Name">
-            <input type = "text" name="nLname" placeholder= "Last Name">
-            <input type = "number" name="nSSN" placeholder="Social Security Number">
-            <input type = "number" name="nAge" placeholder="Age">
-            <input type = "text" name="nGender" placeholder ="Gender">
-            <input type = "text" name="nRace" placeholder = "Race">
-            <input type = "number" name="nPhone#" placeholder="Phone Number">
-            <input type = "text" name = "nAddress" placeholder = "Address">
-            <button type =  "submit" name="nurse-submit">Finish</button>
-        </form>
-    </div>
-</section>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Register Nurse</h2>
+    <section class ="login-form">
+        <div class = "login-form-form">
+            <form action ="" method = "post" name="create-account-nurse">
+                <input type="text" name="nnewuserName"  placeholder="Username">
+                <input type ="text" name="nnewpassword"  placeholder="Password">
+                <input type = "text" name="nFname" placeholder="First Name">
+                <input type = "text" name="nLname" placeholder= "Last Name">
+                <input type = "number" name="nSSN" placeholder="Social Security Number">
+                <input type = "number" name="nAge" placeholder="Age">
+                <input type = "text" name="nGender" placeholder ="Gender">
+                <input type = "text" name="nRace" placeholder = "Race">
+                <input type = "number" name="nPhone#" placeholder="Phone Number">
+                <input type = "text" name = "nAddress" placeholder = "Address">
+                <button type =  "submit" name="nurse-submit">Finish</button>
+            </form>
+        </div>
+    </section>
+</body>
 
 
 

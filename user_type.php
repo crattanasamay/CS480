@@ -5,8 +5,12 @@ include "database.php";
     
 
 ?>
-
-<h3>Before You Login Select Your Account Type</h3>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h2>Before You Login Select Your Account Type</h2>
+<section class = "login-form">
 <form action="">
 <select name="account_type" method="post" id = "account_type">
     <option value="Admin">Admin</option>
@@ -16,6 +20,9 @@ include "database.php";
 <br><br>
 <input type="submit" value="Submit">
 </form>
+</section>
+</body>
+</html>
 
 <?php
  

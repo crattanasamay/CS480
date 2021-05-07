@@ -6,6 +6,7 @@ include "database.php";
 
 
 
+
 <section class = "information-form">
     <h3>Information</h3>
     <div class = "account-information-form">
