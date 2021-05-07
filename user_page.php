@@ -71,7 +71,7 @@ if(accountType == "Nurse"){
 if(accountType == "Patient"){
     var navBar = document.createElement('ul');
     var ele1 = document.createElement('li');
-    ele1.innerHTML = '<a href="user_page.php">Update Information</a>';
+    ele1.innerHTML = '<a href="update_patient_patient.php">Update Information</a>';
     navBar.appendChild(ele1);
     var ele2 = document.createElement('li');
     ele2.innerHTML = '<a href="user_page.php">Schedule Vaccination</a>';

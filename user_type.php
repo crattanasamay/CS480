@@ -22,7 +22,7 @@ include "database.php";
 
 if(isset($_GET['account_type'])){
         $accountType = $_GET["account_type"];
-
+        
         session_start();
         $username = $_SESSION['newuserName'];
         $password = $_SESSION['newpassword'];

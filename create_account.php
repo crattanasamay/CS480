@@ -4,7 +4,7 @@ include "database.php";
 
 ?>
 <section class ="create-form">
-    <h3>Create Account</h3>
+    <h3>Create Account </h3>
     <div class = "create-account-form">
         <form action ="" method = "post" name="create-account">
             <input type="text" name="newuserName" id="newuserName" placeholder="Username">

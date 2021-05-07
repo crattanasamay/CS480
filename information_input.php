@@ -46,18 +46,21 @@ if(isset($_POST["information-submit"])){
     $PhoneNumber = $_POST["Phone#"];
     $address = $_POST["Address"];
     $input = "";
-    echo $Fname, $Lname,$SSN,$Age,$Gender,$Race,$Occupation,$PhoneNumber,$address;
 
-    switch ($accountType){
+    switch (strval($accountType)){
         case "Patient":
             $input = "INSERT patients (PatientID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','$Occupation','$PhoneNumber','$address')";
+            break;
         case "Admin":
             $input = "INSERT admins (adminID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','$Occupation','$PhoneNumber','$address')";
+            break;
     
-        case "Nurse:":
+        case "Nurse":
             $input = "INSERT nurses (nurseID,Fname,Lname,SSN,Age,Gender,Race,Occupation,PhoneNumber,Address) VALUES('$accountID','$Fname','$Lname','$SSN','$Age','$Gender','$Race','$Occupation','$PhoneNumber','$address')";
+            break;
     }
 
+    
 
    
     if(mysqli_query($conn,$input)){
