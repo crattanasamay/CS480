@@ -39,7 +39,7 @@ if(accountType == "Admin"){
     ele2.innerHTML = '<a href="update_nurse.php">Update Nurse Information</a>';
     navBar.appendChild(ele2);
     var ele5 = document.createElement('li');
-    ele5.innerHTML = '<a href="user_page.php">Update Vaccine</a>';
+    ele5.innerHTML = '<a href="update_vaccine.php">Update Vaccine</a>';
     navBar.appendChild(ele5);
     var ele6 = document.createElement('li');
     ele6.innerHTML = '<a href="user_page.php">View Nurse Information</a>';
