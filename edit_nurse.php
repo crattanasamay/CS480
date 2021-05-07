@@ -71,7 +71,6 @@ if(isset($_POST["nurse-edit-information-submit"])){
     if($accountCheck){
         print ("<script LANGUAGE='JavaScript'>
         window.alert('Account Sucessfully Updated');
-        window.location.href='user_page.php';
         </script>");
     }
     else{

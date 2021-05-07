@@ -67,6 +67,9 @@ if(isset($_POST["patient-edit-information-submit"])){
 
     $accountCheck = mysqli_query($conn,$updateAccount);
     if($accountCheck){
+       session_start();
+       $_SESSION['userName'] = $userName;
+        
         print ("<script LANGUAGE='JavaScript'>
         window.alert('Account Sucessfully Updated');
         window.location.href='user_page.php';
