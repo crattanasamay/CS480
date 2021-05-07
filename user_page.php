@@ -74,7 +74,7 @@ if(accountType == "Patient"){
     ele1.innerHTML = '<a href="update_patient_patient.php">Update Information</a>';
     navBar.appendChild(ele1);
     var ele2 = document.createElement('li');
-    ele2.innerHTML = '<a href="user_page.php">Schedule Vaccination</a>';
+    ele2.innerHTML = '<a href="timeslots.php">Schedule Vaccination</a>';
     navBar.appendChild(ele2);
     var ele3 = document.createElement('li');
     ele3.innerHTML = '<a href="user_page.php">Cancel Vaccination</a>';
