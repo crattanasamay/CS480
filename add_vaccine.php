@@ -6,9 +6,9 @@ include "database.php";
 
 
 
-<section class = "information - form">
+<section class = "information-form">
     <h3>Information</h3>
-    <div class = "Vaccine-information-form">
+    <div class = "account-information-form">
         <form action = "" method ="post" name="vaccine_information">
             <input type = "text" name="Company" placeholder="Company">
             <input type = "text" name="Doses" placeholder= "Number of Doses">

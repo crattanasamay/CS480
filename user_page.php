@@ -88,4 +88,3 @@ if(accountType == "Patient"){
 
 
 </script>
-<head>

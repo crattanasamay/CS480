@@ -26,9 +26,9 @@ $Address = $nurseSql['Address'];
 ?>
 
 
-<section class = "information - form">
+<section class = "information-form">
     <h3>Edit Information Nurse ID <?php echo $employeeID;?></h3>
-    <div class = "account-information-form-nurse">
+    <div class = "account-information-form">
         <form action = "" method ="post" name="account_information-nurse">
             <input type = "text" name="nnAccount" value="<?php echo $accountUserName?>">
             <input type = "text" name= "nnPassword" value = "<?php echo $accountPassword?>">
