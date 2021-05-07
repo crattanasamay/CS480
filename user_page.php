@@ -9,7 +9,6 @@ session_start();
 
 
 $userName = $_SESSION['userName'];
-session_abort();
 $sql ="SELECT * FROM users WHERE accountUserName='$userName'";
 $check = mysqli_query($conn,$sql);
 $userArray = mysqli_fetch_array($check);
@@ -19,6 +18,7 @@ $userArray = mysqli_fetch_array($check);
 $accountType = $userArray['accountType'];
 $accountID = $userArray['accountId'];
 
+$_SESSION['accountId']=$accountID;
 
 
 
@@ -52,7 +52,7 @@ if(accountType == "Admin"){
 if(accountType == "Nurse"){
     var navBar = document.createElement('ul');
     var ele1 = document.createElement('li');
-    ele1.innerHTML = '<a href="user_page.php">Update Information</a>';
+    ele1.innerHTML = '<a href="update_nurse_nurse.php">Update Information</a>';
     navBar.appendChild(ele1);
     var ele2 = document.createElement('li');
     ele2.innerHTML = '<a href="user_page.php">Schedule Time</a>';
