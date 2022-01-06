@@ -1,2 +1,2 @@
 # CS480
-Databases
+Simple Project that allows users to create and edit nurses.
